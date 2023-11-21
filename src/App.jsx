@@ -2,14 +2,15 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import ItemCounter from "./components/ItemCount/ItemCounter";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 function App() {
   return (
     <>
       <NavBar />
-      <main className="mainItems">
-        <ItemListContainer titulo="Celular Samsung" precio={850.0} />
-        <ItemListContainer titulo="Celular Iphone" precio={900.0} />
-        <ItemListContainer titulo="Celular Motorola" precio={700.0} />
+      <main>
+        <ItemListContainer greeting="Bienvenidos" />
+        <ItemDetailContainer />
       </main>
     </>
   );

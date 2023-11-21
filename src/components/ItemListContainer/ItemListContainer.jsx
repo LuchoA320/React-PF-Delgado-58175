@@ -1,14 +1,25 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import styles from "./ItemListContainer.module.css";
+import { getProducts } from "../../../routes/asyncmock";
+import { ItemList } from "../ItemList/ItemList";
 
-export const ItemListContainer = (props) => {
-  const { titulo, precio } = props;
+export const ItemListContainer = ({ greeting }) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts()
+      .then((response) => {
+        setProducts(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
-    <div className={styles.cardProducto}>
-      <img src="#" alt="" />
-      <h2> {titulo} </h2>
-      <h3> U$D {precio} </h3>
-      <button>Agregar al Carrito</button>
+    <div>
+      <h1 className={styles.greeting}>{greeting}</h1>
+      <ItemList products={products} />
     </div>
   );
 };
