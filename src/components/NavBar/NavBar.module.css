@@ -11,7 +11,7 @@ nav {
   height: 15vh;
   width: 100vw;
   display: flex;
-  background-color: rgb(77, 77, 77);
+  background-color: #0b2742;
   align-items: center;
   justify-content: space-between;
 }
@@ -20,6 +20,7 @@ a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  margin: 10px;
 }
 
 .logo {

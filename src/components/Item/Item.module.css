@@ -17,3 +17,14 @@
 .productImg {
   height: 300px;
 }
+
+.itemFooter {
+  background-color: #0b2742;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}

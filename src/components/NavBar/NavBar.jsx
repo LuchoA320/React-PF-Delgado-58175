@@ -2,39 +2,25 @@ import React from "react";
 import styles from "./NavBar.module.css";
 import viteLogo from "/vite.svg";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <header>
       <nav className={styles.navBar}>
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src={viteLogo} className="logo" alt="Vite logo" />
           <h4>Vite E-Shop</h4>
-        </div>
+        </Link>
 
         <ul>
-          <li onClick={link()}>
-            <a href="#">Home</a>
-          </li>
-          <li onClick={link()}>
-            <a href="#">Products</a>
-          </li>
-          <li onClick={link()}>
-            <a href="#">Account</a>
-          </li>
-          <li onClick={link()}>
-            <a href="#">About</a>
-          </li>
-          <li onClick={link()}>
-            <a href="#">Contact</a>
-          </li>
+          <NavLink to={`/category/Celulares`}>Celulares</NavLink>
+          <NavLink to={`/category/Televisores`}>Televisores</NavLink>
+          <NavLink to={`/category/Notebooks`}>Notebooks</NavLink>
         </ul>
         <CartWidget />
       </nav>
     </header>
   );
 };
-function link() {
-  console.log("Tocaste un Link");
-}
 export default NavBar;
