@@ -31,3 +31,12 @@
   font-size: 2.5rem;
   color: #0b2742;
 }
+.button {
+  background-color: #0b2742;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  color: white;
+}
