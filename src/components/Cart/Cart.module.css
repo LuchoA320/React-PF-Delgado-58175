@@ -53,3 +53,7 @@
 .itemInfo {
   width: 700px;
 }
+
+button {
+  margin: 10px;
+}

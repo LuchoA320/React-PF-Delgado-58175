@@ -3,8 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 export const Cart = () => {
-  const { cart, clearCart, cartLenght, total, removeItem } =
-    useContext(CartContext);
+  const { cart, clearCart, removeItem } = useContext(CartContext);
   const [cartTotal, setCartTotal] = useState(0);
   const getTotal = () => {
     let total = 0;
@@ -43,9 +42,14 @@ export const Cart = () => {
         </div>
       ))}
       <h3>Total: ${cartTotal} </h3>
-      <button className={styles.button} onClick={() => clearCart()}>
-        Limpiar carrito
-      </button>
+      <div>
+        <button className={styles.button} onClick={() => clearCart()}>
+          Limpiar carrito
+        </button>
+        <button className={styles.button}>
+          <Link to={"/checkout"}>Comprar</Link>
+        </button>
+      </div>
     </div>
   );
 };

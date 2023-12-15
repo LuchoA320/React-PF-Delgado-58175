@@ -1,0 +1,72 @@
+.divOrder {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: 50px;
+  padding: 20px;
+}
+
+.divOrder h1 {
+  text-align: center;
+}
+
+.generating {
+  text-align: center;
+}
+
+.generating h3 {
+  color: gray;
+  margin: 10px;
+}
+
+.formContainer {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: 50px;
+  padding: 20px;
+}
+.formContainer h1 {
+  text-align: center;
+}
+
+.formLabel {
+  font-weight: 700;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  color: #0b2742;
+  margin: 10px;
+}
+
+.formInput {
+  background-color: #ffffff;
+  color: #0b2742;
+  width: 400px;
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid #0b2742;
+  outline: none;
+  font-size: large;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitButton {
+  height: 50px;
+  margin: 10px;
+  background-color: #0b2742;
+}
+
+.inputSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

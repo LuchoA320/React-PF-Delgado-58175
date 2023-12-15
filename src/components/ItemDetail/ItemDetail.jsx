@@ -43,7 +43,7 @@ export const ItemDetail = ({
           {quantityAdded > 0 ? (
             <div>
               <Link to={`/cart`} className={styles.button}>
-                Continuar Compra
+                Ir al carrito
               </Link>
             </div>
           ) : (

@@ -17,9 +17,9 @@ export default function ItemCounter({ initial, stock, onAdd }) {
   return (
     <div className={styles.counter}>
       <div className={styles.controlesCounter}>
-        <button onClick={sumar}>+</button>
-        <h2>{cantidad}</h2>
         <button onClick={restar}>-</button>
+        <h2>{cantidad}</h2>
+        <button onClick={sumar}>+</button>
       </div>
       <div>
         <button onClick={() => onAdd(cantidad)} disabled={!stock}>

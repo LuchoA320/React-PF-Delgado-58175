@@ -10,9 +10,14 @@ export const ItemDetailContainer = () => {
     const productRef = doc(db, "productos", itemId);
 
     getDoc(productRef).then((producto) => {
+      const productData = producto.data();
+      const formattedProductData = {
+        ...productData,
+        price: productData.price.toLocaleString(),
+      };
       setProduct({
         id: producto.id,
-        ...producto.data(),
+        ...formattedProductData,
       });
     });
   }, [itemId]);
