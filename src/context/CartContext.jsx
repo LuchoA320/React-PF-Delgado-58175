@@ -15,6 +15,8 @@ export const CartProvider = ({ children }) => {
     } else {
       console.error(`El producto ya fue agregado`);
     }
+
+    console.log(item);
   };
 
   const removeItem = (itemId) => {
@@ -28,9 +30,28 @@ export const CartProvider = ({ children }) => {
   const isInCart = (itemId) => {
     return cart.some((prod) => prod.id === itemId);
   };
+  const total = () => {
+    return cart.reduce((prev, act) => prev + act.cantidad * act.price, 0);
+  };
 
+  const cartLenght = () => {
+    return cart.reduce(
+      (prevLenght, actLenght) => prevLenght + actLenght.cantidad,
+      0
+    );
+  };
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        setCart,
+        total,
+        cartLenght,
+        addItem,
+        removeItem,
+        clearCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

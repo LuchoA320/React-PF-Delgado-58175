@@ -22,6 +22,8 @@ export const ItemDetail = ({
       id,
       name,
       price,
+      image,
+      category,
     };
     addItem(item, cantidad);
   };
