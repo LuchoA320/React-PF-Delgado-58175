@@ -13,7 +13,7 @@ export const ItemDetailContainer = () => {
       const productData = producto.data();
       const formattedProductData = {
         ...productData,
-        price: productData.price.toLocaleString(),
+        price: productData.price.toLocaleString("es-ES"),
       };
       setProduct({
         id: producto.id,

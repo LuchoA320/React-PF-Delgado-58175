@@ -29,7 +29,7 @@ export const ItemListContainer = ({ greeting }) => {
           products.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
-            price: doc.data().price.toLocaleString(),
+            price: doc.data().price.toLocaleString("es-ES"),
           }))
         );
       })
