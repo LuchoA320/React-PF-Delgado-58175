@@ -79,7 +79,7 @@ export const Checkout = () => {
                 <p>
                   Cantidad: {p.cantidad} | Categoria: {p.category}
                 </p>
-                <h3>Total ${p.price * p.cantidad} </h3>
+                <h3>Total U$D {p.price * p.cantidad} </h3>
               </div>
             </div>
           );

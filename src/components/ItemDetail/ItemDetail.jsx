@@ -38,7 +38,7 @@ export const ItemDetail = ({
             Marca: {brand} | Categoria: {category} | Stock: {stock}
           </p>
           <hr />
-          <h2 className={styles.priceTag}>${price}</h2>
+          <h2 className={styles.priceTag}>U$D {price}</h2>
           <hr />
           {quantityAdded > 0 ? (
             <div>

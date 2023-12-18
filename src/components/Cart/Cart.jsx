@@ -34,14 +34,14 @@ export const Cart = () => {
             <p>
               Cantidad: {p.cantidad} | Categoria: {p.category}
             </p>
-            <h3>Subtotal ${p.price * p.cantidad} </h3>
+            <h3>Subtotal U$D {p.price * p.cantidad} </h3>
           </div>
           <button onClick={() => removeItem(p.id, p.item)}>
             <i class="bx bxs-trash"></i>
           </button>
         </div>
       ))}
-      <h3>Total: ${cartTotal} </h3>
+      <h3>Total: U$D {cartTotal} </h3>
       <div>
         <button className={styles.button} onClick={() => clearCart()}>
           Limpiar carrito

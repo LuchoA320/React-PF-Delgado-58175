@@ -10,7 +10,7 @@ export const Item = ({ id, name, image, price, stock }) => {
         <h2>{name}</h2>
       </section>
       <section>
-        <h3>${price}</h3>
+        <h3>U$D {price}</h3>
         <p>Stock: {stock}</p>
       </section>
       <footer className={styles.itemFooter}>
